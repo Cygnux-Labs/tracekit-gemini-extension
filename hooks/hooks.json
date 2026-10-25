@@ -1,0 +1,66 @@
+{
+  "hooks": {
+    "BeforeTool": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "name": "tracekit",
+            "type": "command",
+            "command": "/bin/sh \"${extensionPath}/scripts/tracekit-hook\" BeforeTool",
+            "timeout": 600000
+          }
+        ]
+      }
+    ],
+    "AfterTool": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "name": "tracekit",
+            "type": "command",
+            "command": "/bin/sh \"${extensionPath}/scripts/tracekit-hook\" AfterTool",
+            "timeout": 30000
+          }
+        ]
+      }
+    ],
+    "BeforeAgent": [
+      {
+        "hooks": [
+          {
+            "name": "tracekit",
+            "type": "command",
+            "command": "/bin/sh \"${extensionPath}/scripts/tracekit-hook\" BeforeAgent",
+            "timeout": 30000
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "name": "tracekit",
+            "type": "command",
+            "command": "/bin/sh \"${extensionPath}/scripts/tracekit-hook\" SessionStart",
+            "timeout": 30000
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "name": "tracekit",
+            "type": "command",
+            "command": "/bin/sh \"${extensionPath}/scripts/tracekit-hook\" SessionEnd",
+            "timeout": 30000
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "tracekit",
+  "version": "1.4.2",
+  "description": "Records each Gemini CLI tool call in a signed, tamper-evident log that verifies offline, after a local Tracekit policy allows, blocks or holds it for your approval. Needs the tracekit-ai Python package."
+}
